@@ -7,7 +7,6 @@
 
 import { menuArray } from "./data.js";
 const menu = document.getElementById("menu");
-console.log(menu);
 
 function getMenuHtml() {
     let menuHtml = ``;
@@ -27,5 +26,14 @@ function getMenuHtml() {
     return menuHtml;
 }
 
-console.log(getMenuHtml());
 menu.innerHTML = getMenuHtml(); // This is the same as document.getElementById("menu").innerHTML = getMenuHtml()
+
+function handleAddItemClick(itemId) {
+    console.log(itemId);
+    // add item to cart
+    // update cart total
+    // update cart html
+    // update menu html
+    // update order html
+    // update order total
+}
