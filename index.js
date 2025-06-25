@@ -17,23 +17,22 @@ function getMenuHtml() {
             <div class="menu-item-description">
                 <h2>${item.name}</h2>
                 <p>${item.ingredients.join(", ")}</p>
-                <h3>${item.price}</h3>
+                <h3>$${item.price}</h3>
             </div>
-            <button class="menu-item-add" data-add="${item.id}">+</button>
-        </div>
-        `;
+            <button class="menu-item-add" data-id="${item.id}">+</button>
+        </div>`;
+
+        let cartItem = document.querySelector(`[data-id="${item.id}"]`);
+        console.log(cartItem);
     });
     return menuHtml;
 }
 
-menu.innerHTML = getMenuHtml(); // This is the same as document.getElementById("menu").innerHTML = getMenuHtml()
+menu.innerHTML = getMenuHtml();
 
-function handleAddItemClick(itemId) {
-    console.log(itemId);
-    // add item to cart
-    // update cart total
-    // update cart html
-    // update menu html
-    // update order html
-    // update order total
-}
+// add item to cart
+// update cart total
+// update cart html
+// update menu html
+// update order html
+// update order total
