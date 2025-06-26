@@ -21,14 +21,27 @@ function getMenuHtml() {
             </div>
             <button class="menu-item-add" data-id="${item.id}">+</button>
         </div>`;
-
-        let cartItem = document.querySelector(`[data-id="${item.id}"]`);
-        console.log(cartItem);
     });
     return menuHtml;
 }
 
 menu.innerHTML = getMenuHtml();
+menu.addEventListener("click", function (e) {
+    if (e.target.dataset.id) {
+        const id = e.target.dataset.id;
+        console.log(id);
+    }
+});
+
+function addItemToCart(id) {}
+
+`
+<h1>Your Order</h1>
+<div class="cart-item">
+    <div class="cart-item-name">${item.name}</div>
+</div>
+<hr>
+<div class="total"></div>`
 
 // add item to cart
 // update cart total
