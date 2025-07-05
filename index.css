@@ -10,6 +10,10 @@ body {
   padding: 25px;
 }
 
+.menu {
+  margin: auto;
+}
+
 .menu-item-emoji {
   font-size: 80px;
 }
